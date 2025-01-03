@@ -1,10 +1,7 @@
 #PostLab3
 
 '''
-Modify the sentence-generator program of Case Study 5.3:
-
-METIS book: 9781337671019, page 150.
-Python source code: generator.py
+Modify the sentence-generator program of Case Study 
 
 so that it inputs its vocabulary from a set of text files at startup.
 The filenames are nouns.txt, verbs. txt, articles.txt, and prepositions.txt.
@@ -14,22 +11,25 @@ The function should then convert the list to a tuple and return this tuple.
 Call the function with an actual filename to initialize each of the four variables for the vocabulary.)
 '''
 
-"""
-Program: generator.py
-Author: Ken
-Generates and displays sentences using a simple grammar
-and vocabulary.  Words are chosen at random.
-"""
-
 import random
 
-articles = ("A", "THE")
+"""
+Chan:
 
-nouns = ("BOY", "GIRL", "BAT", "BALL")
+Defining of getWords function added:
+"""
 
-verbs = ("HIT", "SAW", "LIKED")
+def getWords(filename)
+    with open(filename, 'r') as file:
+        words = [line.strip().upper() for line in file]
+    return tuple(words)
 
-prepositions = ("WITH", "BY")
+"""
+Load words from text files:
+
+Note to Troy: I'll handle the creation of the text files for this program. :)
+"""
+
 
 def sentence():
     """Builds and returns a sentence."""
@@ -58,4 +58,3 @@ def main():
 # The entry point for program execution
 if __name__ == "__main__":
     main()
-
