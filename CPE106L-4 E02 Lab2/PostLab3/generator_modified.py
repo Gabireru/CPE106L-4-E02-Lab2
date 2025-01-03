@@ -30,6 +30,10 @@ Load words from text files:
 Note to Troy: I'll handle the creation of the text files for this program. :)
 """
 
+articles = getWords("articles.txt")
+nouns = getWords("nouns.txt")
+verbs = getWords("verbs.txt")
+prepositions = getWords("prepositions.txt")
 
 def sentence():
     """Builds and returns a sentence."""
