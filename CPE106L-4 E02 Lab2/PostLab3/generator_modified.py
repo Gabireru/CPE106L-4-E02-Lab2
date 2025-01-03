@@ -19,7 +19,7 @@ Chan:
 Defining of getWords function added:
 """
 
-def getWords(filename)
+def getWords(filename):
     with open(filename, 'r') as file:
         words = [line.strip().upper() for line in file]
     return tuple(words)
